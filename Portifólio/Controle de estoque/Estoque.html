@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de produto</title>
+    <script src="/Training/Controle de estoque/estoque.js"></script>
+  </head>
+  <body>
+    <div class="carrinho">
+      <img src="/Training/Controle de estoque/carrinhoCompras.png" />
+      <p>Itens no estoque: <span id="totalEstoque">0</span></p>
+    </div>
+    <form>
+      <table>
+        <p id="ASDF">Cadastro de novos produtos</p>
+        <tr>
+          <td class="alinharRotulos">Nome do produto:</td>
+          <td><input id="txtNomeProduto" type="text" /></td>
+        </tr>
+        <tr>
+          <td class="alinharRotulos">Código do produto:</td>
+          <td><input id="txtCodProduto" type="text" /></td>
+        </tr>
+        <tr>
+          <td class="alinharRotulos">Quantidade do produto:</td>
+          <td>
+            <select id="qntdProduto">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              value="Cadastrar"
+              class="alinhaButtons"
+              onclick="validarProduto(txtNomeProduto, txtCodProduto, qntdProduto)"
+            />
+            <input type="button" value="Ver estoque" class="alinhaButtons" />
+            <input
+              type="button"
+              value="Limpar"
+              class="alinhaButtons"
+              onclick="resetarCampos()"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
